@@ -1,7 +1,6 @@
-package com.thetestingacademy.ex01_Selenium_Basics;
+package ex01_Selenium_Basics;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestSelenium01 {
