@@ -22,6 +22,8 @@ public class SeleniumProjectHW {
         hlink.click();
         WebElement bemail = driver.findElement(By.id("page-v1-step1-email"));
         bemail.sendKeys("admin");
+        WebElement checkbox = driver.findElement(By.name("gdpr_consent_checkbox"));
+        checkbox.click();
         try{
             Thread.sleep(3000);
         }
@@ -29,6 +31,8 @@ public class SeleniumProjectHW {
             //throw new RuntimeException(e);
             System.out.println(e.getMessage());
         }
+
+
         WebElement error_mssg = driver.findElement(By.xpath("//*[@id=\"page-free-trial-signup-form-step1\"]/div[1]/div"));
         System.out.println(error_mssg.getText());
         Assert.assertEquals(error_mssg.getText(),"The email address you entered is incorrect.");
